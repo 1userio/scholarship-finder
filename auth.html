@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Account | Scholarship Finder</title><link rel="icon" href="images/favicon.png" type="image/png"><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header class="simple-header">
+  <nav class="nav">
+    <a class="logo" href="index.html">Scholarship Finder</a>
+
+    <div class="nav-actions">
+      <a class="nav-link" href="index.html">Back to search</a>
+      <div id="accountActions" class="account-actions"></div>
+    </div>
+  </nav>
+</header>
+<main class="container auth-page"><div class="auth-card">
+<p class="mini-label">YOUR ACCOUNT</p><h1 id="title">Create your account</h1><p id="intro">Create a free account to keep your scholarship progress across devices.</p>
+<form id="form">
+<label id="nameLabel">Name<input id="name" autocomplete="name" placeholder="Your name"></label>
+<label>Email<input id="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+<label>Password<input id="password" type="password" autocomplete="new-password" minlength="8" required placeholder="At least 8 characters"></label>
+<button class="primary-action auth-submit" id="submit" type="submit">Create account</button>
+</form>
+<button class="guest-action auth-guest" id="guest">Continue as guest</button>
+<p id="switchText" class="switch-text"></p><div id="message" hidden></div>
+</div></main>
+<script src="js/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/account-ui.js"></script>
+<script src="js/auth.js"></script>
+</body></html>

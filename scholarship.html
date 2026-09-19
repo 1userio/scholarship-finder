@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Scholarship | Scholarship Finder</title>
+ <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header class="simple-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">Scholarship Finder</a>
+
+     <div class="nav-actions">
+  <a class="nav-link" href="contact.html">Contact</a>
+  <a class="nav-link" href="dashboard.html">My Dashboard</a>
+  <a class="nav-link" href="index.html">Search</a>
+  <div id="accountActions" class="account-actions"></div>
+</div>
+    </nav>
+  </header>
+
+  <main class="container detail-page" id="detail"></main>
+
+  <div class="modal-backdrop" id="authModal" hidden>
+    <div class="auth-modal">
+
+      <button class="modal-close" id="modalClose">×</button>
+
+      <p class="mini-label">SAVE YOUR PROGRESS</p>
+
+      <h2>Keep this scholarship</h2>
+
+      <p>
+        Create an account to keep it across devices,
+        or continue as a guest on this device.
+      </p>
+
+      <div class="auth-actions">
+        <button class="primary-action" id="createAccount">
+          Create an account
+        </button>
+
+        <button class="secondary-action" id="loginAccount">
+          Sign in
+        </button>
+
+        <button class="guest-action" id="continueGuest">
+          Continue as guest
+        </button>
+      </div>
+
+      <p class="guest-warning">
+        Guest data stays on this device.
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Project config -->
+ <script src="js/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/account-ui.js"></script>
+<script src="js/detail.js"></script>
+
+</body>
+</html>

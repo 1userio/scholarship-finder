@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Scholarship Finder</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="simple-header">
+  <nav class="nav">
+    <a class="logo" href="index.html">Scholarship Finder</a>
+
+    <div class="nav-actions">
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="dashboard.html">Dashboard</a>
+      <a class="nav-link" href="index.html">Search</a>
+        <div id="accountActions" class="account-actions"></div>
+    </div>
+  </nav>
+</header>
+
+<main class="container trust-page">
+
+  <p class="mini-label">CONTACT US</p>
+
+  <h1 class="page-title">
+    Help us keep Scholarship Finder useful.
+  </h1>
+
+  <p class="section-subtitle">
+    Found incorrect information, a broken link, an outdated deadline,
+    or have a suggestion? Let us know.
+  </p>
+
+  <section class="detail-section">
+    <form>
+
+      <label>
+        Name
+        <input type="text" name="name" placeholder="Your name">
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" placeholder="you@example.com">
+      </label>
+
+      <label>
+        What is this about?
+        <select name="topic">
+          <option>Report incorrect information</option>
+          <option>Report a broken link</option>
+          <option>Suggest an update</option>
+          <option>Suggest a scholarship</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <label>
+        Message
+        <textarea
+          name="message"
+          rows="7"
+          placeholder="Tell us what you found or what you would like to suggest..."
+        ></textarea>
+      </label>
+
+      <button type="submit" class="primary-action">
+        Send message
+      </button>
+
+    </form>
+  </section>
+
+  <p class="muted-small">
+    Scholarship Finder does not process scholarship applications.
+    For application questions, always contact the official scholarship provider.
+  </p>
+
+</main>
+
+<footer>
+  <p>Scholarship Finder</p>
+  <p class="disclaimer">
+    Independent information project. Always confirm current details
+    on the official source before applying.
+  </p>
+</footer>
+<script src="js/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/account-ui.js"></script>
+
+<script>
+  const supabaseClient = window.supabase.createClient(
+    window.SCHOLARSHIP_FINDER_CONFIG.SUPABASE_URL,
+    window.SCHOLARSHIP_FINDER_CONFIG.SUPABASE_ANON_KEY
+  );
+</script>
+
+<script src="js/contact.js"></script>
+
+</body>
+</html>

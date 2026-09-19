@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scholarship Finder</title>
+<link rel="icon" href="images/favicon.png" type="image/png">
+<meta name="description" content="Find, save, and track scholarship opportunities for studying abroad.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="hero">
+  <nav class="nav">
+    <a class="logo" href="index.html">Scholarship Finder</a>
+  <div class="nav-actions">
+  <a class="nav-link" href="about.html">About</a>
+  <a class="nav-link" href="contact.html">Contact</a>
+  <a class="nav-link" href="dashboard.html">Dashboard</a>
+    <div id="accountActions" class="account-actions"></div>
+</div>
+  </nav>
+
+  <div class="hero-content">
+    <p class="eyebrow">YOUR GUIDE TO STUDYING ABROAD</p>
+    <h1>Find funding<br><span>for your future.</span></h1>
+    <p class="hero-text">Search scholarships, check eligibility, save opportunities, and keep your application progress in one place.</p>
+    <a class="hero-cta" href="#finder">Explore scholarships</a>
+  </div>
+</header>
+
+<main class="container">
+<section class="filters-card reveal" id="finder">
+<p class="mini-label">SEARCH</p>
+<h2>Find an opportunity</h2>
+<p class="section-subtitle">Choose your country, then narrow the results.</p>
+<div class="filters">
+<label>My country<select id="countryFilter">
+<option value="none">Choose your country</option><option>Algeria</option><option>Morocco</option><option>Tunisia</option><option>Egypt</option><option>Jordan</option><option>India</option><option>Türkiye</option><option>Pakistan</option><option>Bangladesh</option>
+</select></label>
+<label>Eligibility<select id="eligibilityFilter"><option value="all">All</option><option value="eligible">Country match</option><option value="check">Check eligibility</option></select></label>
+<label>Level<select id="degreeFilter"><option value="all">All levels</option><option>Bachelor</option><option>Master</option><option>PhD</option><option>Varies</option></select></label>
+<label>Funding<select id="fundingFilter"><option value="all">All funding</option><option>Fully funded</option><option>Full demonstrated need</option><option>Partial / varies</option></select></label>
+<label>Search<input id="searchInput" type="search" placeholder="Scholarship, country, provider..."></label>
+</div>
+<div class="eligibility-note" id="eligibilityNote">Choose your country to personalize the results. Uncertain cases stay marked for checking instead of being guessed.</div>
+</section>
+
+<section class="toolbar reveal">
+<div><p class="mini-label">RESULTS</p><h2>Scholarships</h2></div>
+<div class="toolbar-actions">
+<label class="compact-label">Sort<select id="sortFilter"><option value="relevance">Relevance</option><option value="deadline">Closing soon</option><option value="name">Name A–Z</option></select></label>
+<p class="result-count" id="resultCount"></p>
+</div>
+</section>
+
+<section class="grid" id="scholarshipGrid"></section>
+</main>
+
+<div class="modal-backdrop" id="authModal" hidden>
+<div class="auth-modal">
+<button class="modal-close" id="modalClose">×</button>
+<p class="mini-label">SAVE YOUR PROGRESS</p>
+<h2>Keep your scholarships with you</h2>
+<p>Save an opportunity to your dashboard. Create an account for cross-device sync, or continue as a guest on this device.</p>
+<div class="auth-actions">
+<button class="primary-action" id="createAccount">Create an account</button>
+<button class="secondary-action" id="loginAccount">Sign in</button>
+<button class="guest-action" id="continueGuest">Continue as guest</button>
+</div>
+<p class="guest-warning">Guest progress is saved in this browser only.</p>
+</div>
+</div>
+
+<footer>
+<p>Scholarship Finder</p>
+<p class="disclaimer">Scholarship Finder is an independent information project. We are not a scholarship provider and do not process applications. Always verify current dates, eligibility, funding, and application instructions on the official source.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/account-ui.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

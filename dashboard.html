@@ -1,0 +1,20 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>My Dashboard | Scholarship Finder</title><link rel="icon" href="images/favicon.png" type="image/png"><link rel="stylesheet" href="css/style.css"></head>
+<body><header class="simple-header">
+  <nav class="nav">
+    <a class="logo" href="index.html">Scholarship Finder</a>
+
+    <div class="nav-actions">
+      <a class="nav-link" href="index.html">Search scholarships</a>
+      <div id="accountActions" class="account-actions"></div>
+    </div>
+  </nav>
+</header>
+<main class="container dashboard-page"><section class="dashboard-hero"><div><p class="mini-label">MY DASHBOARD</p><h1 class="page-title">Your scholarship space</h1><p class="section-subtitle">Follow opportunities, track applications, save notes, and watch deadlines.</p></div><div class="mode-pill" id="modePill">Guest mode</div></section>
+<section class="dashboard-stats"><div><span>Saved</span><strong id="savedStat">0</strong></div><div><span>In progress</span><strong id="progressStat">0</strong></div><div><span>Deadlines tracked</span><strong id="deadlineStat">0</strong></div></section>
+<section class="dashboard-section"><div class="section-head"><div><p class="mini-label">DEADLINES</p><h2>Coming up</h2></div><a class="text-link" href="index.html#finder">Find more</a></div><div class="deadline-list" id="deadlineList"></div></section>
+<section class="dashboard-section"><p class="mini-label">SAVED</p><h2>Your saved scholarships</h2><div class="grid" id="dashGrid"></div></section>
+<section class="dashboard-section"><p class="mini-label">NOTES</p><h2>Your private notes</h2><div class="notes-list" id="notesList"></div></section></main>
+<script src="js/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/account-ui.js"></script>
+<script src="js/dashboard.js"></script>
