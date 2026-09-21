@@ -1,4 +1,4 @@
-# Scholarship Finder v15
+# Scholarship Finder 
 
 Scholarships-only V1. The Save flow and local dashboard are stable for testing.
 
